@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+			document.write("<h1>컴퓨터와 가위,바위,보 게임하기</h1><br/>");
+			
+			var res = prompt("가위,바위,보 중 하나를 선택하세요");
+			
+			let num;
+			// 가위:1, 바위:2, 보:3
+			switch(res) {
+			case "가위" :
+				num = 1;
+				break;
+			case "바위" :
+				num = 2;
+				break;
+			case "보":
+				num = 3;
+				break;
+			}
+			
+			//1부터 3사이의 난수 발생
+			let random = Math.ceil(Math.random()*3);
+			
+			// 조건 비교 
+			if(num == random) {
+				alert("비겼습니다.");
+			}else if(num == random-1 || num == random+2) {
+				alert("졌습니다");
+			}else {
+				alert("이겼습니다.");
+			}
+			
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

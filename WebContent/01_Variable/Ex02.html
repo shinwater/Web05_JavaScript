@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+		/*  
+			자바스크립트에서의 변수와 상수
+			 - 변수: 데이터를 저장하는 공간. 데이터가 변할 수 있음.
+			 - 상수: 데이터를 저장하는 공간. 데이터가 변할 수 없음.
+			
+			변수 선언하는 방법
+			 형식) var 변수명;    <<넣는 데이터에 따라 자료형이 바뀜- 동적 바인딩>>
+			 형식) let 변수명; //ES6 버전부터 변수 선언 시 let 키워드 작성
+			 예 ) var su=100; (숫자형) var str="홍길동" or '홍길동'; (문자형) var t= true; (boolean형)
+			 
+			상수 선언하는 방법
+			 형식) const 변수명; 
+			 
+			 자바스크립트의 기본자료형의 종류
+			   - 숫자형(number) : 숫자를 표현하는 자료형. 자바는 숫자안에서도 정수, 실수로 구분이 되는데
+			   										자바 스크립트에서의 숫자 자료형은 그 종류들을 하나로 총괄한다.
+			   - 문자형(string) :  작은 따옴표  또는 큰 따옴표를 양 끝에 두고, 그 안에 한 글자 이상의 문자,
+			   									기호 또는 숫자가 있는 자료형을 문자형이라고 함.
+			   - 불린형(boolean) : 참(true) 또는 거짓(false) 두 가지 값을 가지는 자료형.
+			   - null과 undefined : null은 빈 값을 의미하고, undefined는 존재하지 않는 값을 의미한다.<<중요!!>>
+			   
+			   변수명 작성 규칙
+			   1. 변수명의 첫 글자로는 영문자나 $또는 _(언더바)만 올 수 있음.
+			   2. 변수명은 자바스크립트의 예약어를 사용할 수 없음.
+			   	예약어는 자바스크립트에서 이미 사용 중인 단어를 말함 => 예를든다면 (document, do, for 등등)
+			   3. 변수명을 사용할 때는 되도록 의미를 부여해서 작성하는 것이 좋음.
+			   4. 변수명을 사용할 때는 대, 소문자를 구분해야 함.
+		*/
+		
+		var name="홍길동";
+		console.log(name);
+		
+		name= 'Jana script';
+		console.log(name);
+		
+		name= 100;
+		console.log(name);
+		
+		/* var str = 'JavaScript';
+		console.log(str);
+		
+		var str = 'Java';
+		console.log(str); */
+		
+		let str = 'JavaScript';
+		console.log(str);
+		
+		/* let str = 'Java';
+		console.log(str); */
+		
+		//상수 작성 방법
+		const con = 27;
+		console.log(con);
+		
+		/* con=154;
+		console.log(con); */ //상수이기 때문에 데이터를 수정하지 못함.
+
+		//웹 브라우저 창에 출력하는 방법
+		document.write("<h2 style='color:red;'>"+str+"</h2>");
+		//typeof 키워드는 지정한 데이터 또는 변수에 저장된 자료의 데이터형을 확인할 때 사용함.
+		document.write(typeof str); /* typeof란?? str변수의 자료형을 출력해주세요~~ */
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

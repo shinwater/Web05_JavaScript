@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+		/* 1. 조건문 : if~else 문 
+					형식) if (조건식) {
+										조건식이 참인 경우 실행문장;
+							  }else {
+										조건식이 거짓인 경우 실행문장;
+							  }
+		*/
+		
+		
+		let walk = parseInt(prompt("당신이 하루에 걷는 양은 몇 걸음인가요?"));
+		
+			if(walk >= 10000) {
+				document.write("매우 좋은 습관을 가지고 계십니다.");
+			}else {
+				document.write("운동을 하셔야 겠네요~");
+			}
+			
+			document.write("<hr/>");
+			
+			// [문제] 회원탈퇴여부를 물어봐서 확인이라고 하면 탈퇴, 취소라고 하면 탈퇴 취소하였습니다.라고 메세지 출력
+			
+			let res = confirm("탈퇴하시겠습니까?");
+			
+			if(res) {
+				document.write("탈퇴");
+			}else {
+				document.write("탈퇴 취소하였습니다.");
+			}
+
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+		// 반복문 - for문
+		for(let i=1; i<=10; i++) {
+			document.write(i+"번째 반복 <br/>");
+		}
+		document.write("<hr/>");
+		
+		//[문제1] 1~100사이의 숫자 중에서 5의 배수일 경우에는 빨간색으로.
+		//				7의 배수인 경우에는 초록색으로, 6의 배수인 경우에는 아쿠아색으로 화면에 출력해 보세요.
+		
+		for(let j=1; j<=100; j++) {
+			if(j%5 == 0) {
+				document.write("<font color='red'>"+j+"</font>");
+			}else if(j % 7 == 0) {
+				document.write("<font color='green'>"+j+"</font>");
+			}else if(j%6 == 0) {
+				document.write("<font color='aqua'>"+j+"</font>");
+			}
+		}
+		
+		document.write("<hr/>");
+		
+		
+		//[문제2] 숫자를 입력받아서 해당 숫자까지의 합을 구하는 프로그램을 만들어보세요.
+		let sum=0;
+		let su = parseInt(prompt("숫자를 입력하세요"));
+		for(let k=1; k<=su; k++) {
+			 sum += k;
+		}
+		 document.write("1부터"+su+"까지의 합은 " +sum+" 입니다.");
+		
+		 document.write("<hr/>");
+		 
+		//[문제3] 문제 2번의 입력받은 숫자까지 합을 구하는데 3의 배수가 아니고,
+		// 			2의 배수가 아닌 나머지 숫자의 합을 구하여 화면에 출력해보세요.
+		
+		let m2 = 0; let m3= 0; let m6=0;
+		for(let k=1; k<=su;k++) {
+			if(k%2 ==0) {
+				m2 += k;
+			}
+		}
+		for(let k=1; k<=su;k++) {
+			if(k%3 ==0) {
+				m3 += k;
+			}
+		}
+		for(let k=1; k<=su;k++) {
+			if(k%6 ==0) {
+				m6 += k;
+			}
+		}
+		
+		document.write(parseInt(sum)-parseInt(m2)-parseInt(m3)+parseInt(m6));
+		
+		/* k%2 !=0 && k%3 !=0 */
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

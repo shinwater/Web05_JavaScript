@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	// 1	2	3	4	5
+	//6	7	8	9	10
+	// ...
+	//
+	//21	22 23 24 25
+	
+	let tab = "<table border='0'>";
+	tab += "<tr>";
+
+		for (let i=1;i<=5;i++) {
+			tab += "<tr>";
+			for(let j=1;j<=5;j++){
+				tab += "<td>"+ (5*(i-1)+j)+"</td>";	
+			}
+			tab += "</tr>"
+		}
+	tab += "</table>";
+	document.write(tab);
+	
+	
+	//1		6  		...	21
+	//2		7					22	
+	//3		8					23
+	//4		9					24
+	//5		10				25
+
+	let tab2 = "<table border='0'>";
+	tab2 += "<tr>";
+
+		for (let i=1;i<=5;i++) {
+			tab2 += "<tr>";
+			for(let j=1;j<=5;j++){
+				tab2 += "<td align='right'>"+ (i+5*(j-1))+"</td>";	
+			}
+			tab2 += "</tr>"
+		}
+	tab2 += "</table>";
+	document.write(tab2);
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+
+    /* 2. 내장함수 : javascript에서 자체적으로 제공해 주는 함수.
+        setInterval() : 일정한 시간마다 주기적으로 특정한 함수를 호출하는 함수
+                    반드시 개발자가 종료(clearInterval())를 시켜주어야함.
+            형식) setInterval(호출할 함수 이름, 시간(ms))
+
+    */
+
+    let id; //전역 변수
+
+    function change_go() {
+        id = setInterval(flashText, 1000); //1초마다 한번씩 flashText 함수호출!!!!
+    }
+    function flashText() {
+        let target = document.getElementById("target");
+        target.style.color = (target.style.color == "red") ? "blue" : "red";
+    }
+    
+    function stop_go() {
+        clearInterval(id); //반드시 써주기~~~~~~ id꼭꼭 넣어주긩...☆
+    }
+    </script>
+</head>
+<body>
+
+    <div id="target">
+        <p>여기는 텍스트 영역입니다.</p>
+    </div>
+
+    <button onclick="change_go()">시작</button>
+    <button onclick="stop_go()">종료</button>
+    
+</body>
+</html>

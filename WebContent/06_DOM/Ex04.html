@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+		onload = function() {
+			//선그리기 요소 추가
+			let hr_element = document.createElement("hr");
+			//문서의 본문에 추가
+			document.body.appendChild(hr_element); 
+			
+			
+			//<p>안녕하세요</p>
+			let p_element = document.createElement("p");
+			let text_element = 
+				document.createTextNode("안녕하세요");
+			
+			p_element.appendChild(text_element);
+			
+			let myDiv = document.getElementById("myDiv");
+			myDiv.appendChild(p_element);
+			myDiv.style.backgroundColor="red";
+		}
+</script>
+</head>
+<body>
+		<div id="myDiv"></div>
+		
+		<!--<div id="myDiv">
+		<p>안녕하세요!!</p>
+		</div>
+		-->
+</body>
+</html>

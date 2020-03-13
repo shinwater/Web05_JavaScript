@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+			/* 
+				자바스크립트에서의 입출력 대화상자(3가지)
+					1. 알림(경고)창(alert) : window.alert("알림내용, 경고내용"); 
+																alert("알림내용, 경고내용");
+					2. 확인창(confirm) : window.confirm("문자열");
+															confirm("문자열");
+					3. 입력창(prompt) : window.prompt("문자열", 초기값);
+															prompt("문자열", 초기값);
+			
+			*/
+	
+			alert("안녕하세요 자바스크립트에 오신 걸 환영합니당..~~");
+			let height = prompt("당신의 키ㄱ를 입력하세요~~~","0");
+			console.log(typeof height);
+			
+			//적정몸무게를 알아보자
+			//적정몸무게 : (ㅋㅣ-100) * 0.9;
+			
+			let weight = (parseInt(height)-100)*0.9;
+			alert("당신의 적정몸무게는 "+weight+"k g 입니다");
+			
+			//confirm("메세지"); [확인][취소]
+			//확인-> true 값 반환, 취소-> false 값 반환
+			let type=confirm("현재 시간은 오전인가요?");
+			alert(type);
+			
+			
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

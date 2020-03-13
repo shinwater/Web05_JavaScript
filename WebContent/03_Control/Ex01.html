@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+		/* 자바스크립트에서의 제어문의 종류
+				1. 조건문 : if 문 , if~else 문, 다중 if~else문, switch~case문
+				2. 반복문 : while문, do~while 문, for문
+		*/
+		
+		/* 1. 조건문 : if 문
+				형식) if(조건문) {
+								조건문이 참인 경우 실행 문장;
+						  }
+		*/
+
+		let walk = parseInt(prompt("당신이 하루에 걷는 양은 몇 걸음인가요?"));
+		
+		if(walk >= 10000) {
+			document.write("매우 좋은 습관을 가지고 계십니다.");
+		}
+		
+		document.write("<hr/>");
+		
+		let phone = parseInt(prompt("당신의 하루 통화량은 몇분인가요?"));
+		
+		if(phone >=60) {
+			document.write("통화를 많이 하시는 편이네요~~");
+		}
+		
+		//자바에서는 조건식에 반드시 boolean 형이 들어가야 한다.
+		//자바스크립트에서는 조건식에 0,null, "", undefined ==> false, 그 나머지는 모두 true로 인식.
+		//문자열도 true로 인식
+		
+		let name = prompt("방문자의 이름은?");
+		
+		if(name) {
+			document.write(name+"님 환영합니다.");
+		}
+		
+		
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

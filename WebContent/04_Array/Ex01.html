@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+		//1. 내장객체 - 날짜(Date)
+		let date= new Date(); 
+		document.write("현재년도: "+ date.getFullYear()+"뇬<br/>");
+		
+		/* getYear()는 1900년을 기준으로함 (1900년:0, 1901:1) 
+			따라서 getYear()를 출력하면 120이 나옴. 
+		*/
+		document.write("현재년도: "+ date.getYear()+"뇬<br/>");
+		/* getMonth()는 0부터 시작함. 1월:0,2월:1... 1을더해야 하는데 괄호안쳐주면 +가 결합연산자로 작용 */
+		document.write("현재월: "+ date.getMonth()+1+"유ㅗㄹ<br/>");
+		document.write("현재일: "+ date.getDate()+"일<br/>");
+		
+		let day = date.getDay(); //현재 요일 ==> 정수형으로 반환(0~6: 0-일요일~ 6-토요일) 
+		if (day == 0) {
+			document.write("현재 요일은 일요일<br/>");
+		}else if (day == 1) {
+			document.write("현재 요일은 월요일<br/>");
+		}else if (day == 2) {
+			document.write("현재 요일은 화요일<br/>");
+		}else if (day == 3) {
+			document.write("현재 요일은 수요일<br/>");
+		}else if (day == 4) {
+			document.write("현재 요일은 목요일<br/>");
+		}else if (day == 5) {
+			document.write("현재 요일은 금요일<br/>");
+		}else if (day == 6) {
+			document.write("현재 요일은 토요일<br/>");
+		}
+		
+		//현재시간 - 시:분:초 받아오기
+		document.write("현재시간: " + date.getHours() + ":");
+		document.write(date.getMinutes() + ":");
+		document.write(date.getSeconds()+ "<br/>");
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

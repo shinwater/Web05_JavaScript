@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+   /*  자바스크립트에서 body 태그의 요소(element)를 가져오는 방법 (2가지)
+    1. <form> 태그의 name 속성으로 가져오는 방법
+        형식) 폼이름. name이름.value;
+    2. 태그의 id 속성으로 가져오는 방법 
+        형식) document.getElementById("아이디").value;
+                => 두 방법은 폼태그의 요소에 id가 쓰였는지, name이 쓰였는지에 따라  */
+    
+    let random =  Math.floor(Math.random()*100) + 1 
+
+    let count = 0;
+
+    function guess() {
+        let su = parseInt(document.getElementById("user").value);
+        count++;
+
+        if(su == random){
+            result = "성공입니다"
+        }else if(su < random){
+            result = "그거보다 커!"
+        }else if(su > random){
+            result = "그거보다 작아!"
+        }
+
+        document.getElementById("result").value = result;
+        document.getElementById("count").value = count;
+    }     
+
+
+</script>
+</head>
+<body>
+
+    <h1>숫자 맞추기 게임</h1>
+    <p> 이 게임은 컴퓨터가 발생시킨 임의의 난수를 맞추는 게임입니다.<br/>
+        숫자는 1부터 100 사이에 있습니다.</p>
+
+    <form>
+        숫자 : <input type="text" id="user" size="5">
+                <input type="button" value="확인" onclick="guess()"><br/><br/>
+        추측횟수 : <input type="text" id = "count" size = "5">
+        힌트 : <input type="text" id = "result" size ="30">
+    </form>
+</body>
+</html>

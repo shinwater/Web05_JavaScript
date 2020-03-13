@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+    
+    onload = function() {
+
+        let myDiv = document.getElementById("myDiv");
+        myDiv.style.backgroundColor= "yellow";
+
+        //id가 myDiv인 요소의 부모 요소를 찾아보자!
+        let parent = myDiv.parentNode;
+        parent.style.backgroundColor = "skyblue";
+
+        let pparent = parent.parentNode;
+        pparent.style.backgroundColor="pink";
+
+        document.getElementById("img1").onclick = function() {//.src:경로
+            document.getElementById("img1").src="../images/car3.gif";
+        }
+        document.getElementById("img2").onclick = function() {
+            document.getElementById("img2").style.visibility ="hidden";
+        }
+    }
+    </script>
+</head>
+<body> <!--<-body가 p의 부모노드-->
+
+    <div>부모노드(ParentNode)</div><!--<-p의 형제노드-->
+    <div class="style1"> <!--<-이친구가 myDiv의 부모노드,p라고하자-->
+        <div>테스트1</div>
+        <div>테스트2</div>
+        <div id="myDiv">테스트2-1</div>
+        <div>테스트3</div>
+        <div>테스트4</div>
+
+    </div>
+    <div>..............</div>
+    <img id="img1" src="../images/car1.gif">
+    <img id="img2" src="../images/car2.gif">
+</body>
+</html>

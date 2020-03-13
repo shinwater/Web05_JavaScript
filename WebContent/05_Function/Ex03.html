@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+		function data() {//frm안에 input이란 네임을 갖는 애가 있니?? 있으면 값을 가져와서 변수에 저장해줭 
+			let res = frm.input.value;
+		
+			if(res == "") {//값이 없는 상태
+				alert("값을 입력하세요.~~~");
+				frm.input.focus(); //커서이동
+			}else {//값이 들어있는 경우
+				alert("값을 입력하셨군요!");
+				alert(res);
+				document.write(res);
+			}
+		}
+
+</script>
+</head>
+<body>
+		
+		<!-- form태그에 name 속성을 설정하는 경우에는 
+		자바스크립트를 사용할 목적으로 name속성 사용 ,name은 중복되면안됌-->
+		<form name="frm">
+			<input type="text" name="input">
+			<input type="button" value="확인하기" onclick="data()">
+		
+		
+		</form>
+</body>
+</html>

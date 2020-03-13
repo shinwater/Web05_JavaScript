@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type ="text/css">
+	#myTable {
+		width: 400px;
+		border: 1px solid black;
+		border-collapse: collapse; /*테두리선이 없게 나옴!*/
+
+	}
+
+	#myTable th,#myTable td {
+		border:1px solid black;
+
+	}
+</style>
+
+<script type="text/javascript">
+	function addRow() {
+		// 1. 한개의 <tr>태그와 4개의 <td>태그를 만들어야 함.
+		let tr = document.createElement("tr");
+		let td1 = document.createElement("td");
+		let td2 = document.createElement("td");
+		let td3 = document.createElement("td");
+		let td4 = document.createElement("td");
+
+		// 2. 각각의 <td> 태그에 <form> 태그의 text 창에서 입력한 내용을 
+		// 텍스트로 설정.
+
+		//<td>f.num.value</td>
+		td1.innerHTML = f.num.value;
+		td2.innerHTML = f.name.value;  
+		td3.innerHTML = f.phone.value;
+		td4.innerHTML = "삭 제";
+
+		// 3. <tr> 태그에 <td> 태그들을 추가해 주어야 함.
+		tr.appendChild(td1); 
+		tr.appendChild(td2); 
+		tr.appendChild(td3); 
+		tr.appendChild(td4);
+
+		let table = document.getElementById("myTable"); 
+		let tbody = table.children[1];
+		tbody.appendChild(tr); //tr태그는 위에 만든 그거...
+
+		f.num.value="";
+		f.name.value="";
+		f.phone.value="";
+		f.num.focus();
+
+		//<tr>에 마우스가 올라갔을 때 해당 행의 번호를  table 객체가 기억해야 함,
+		tr.onmouseover = function() {//무명함수~.~
+			table.clickedRowIndex=this.rowIndex;
+		}
+
+		//클릭을 하면 해당 행을 삭제
+		td4.onclick = function() {
+			//테이블의 행 번호를 받아서 동적으로 테이블의 행을 삭제함.
+			table.deleteRow(table.clickedRowIndex);
+		}
+
+	}
+
+</script>
+</head>
+<body>
+		<h2>테이;블에 행을 추가/ 삭제하는 예제</h2>
+		<form name="f">
+			<fieldset>
+					번 호 : <input type="text" size="3" name="num">	
+					이 름 : <input type="text" size="10" name="name">	
+					연락처 : <input type="text" size="15" name="phone">	
+					<input type="button" value="추가" onclick="addRow()">	
+					
+			</fieldset>
+			
+			<table id="myTable">
+					<thead>
+							<tr>
+							<th>번호</th>
+							<th>이름</th>
+							<th>연락처</th>
+							<th>삭제</th>
+							</tr>
+					</thead>
+					<tbody>
+					
+					</tbody>
+			</table>
+		</form>
+</body>
+</html>

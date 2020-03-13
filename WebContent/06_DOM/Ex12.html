@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;;
+        }
+
+        body {
+            font-size: 20px;
+            font-family: "돋움","굴림";
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        #carZone {
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        #estimate{
+            width: 100%;
+        }
+
+        #estimate th,td {
+            border: 1px solid #ccc;
+            height: 30px;
+        }
+
+        #estimate th {
+            background-color: #333;
+            color:#fff;
+        }
+        #carZone td{
+            text-align: center;
+        }
+
+        tfoot {
+            font-weight: bold;
+        }
+
+        #total{
+            border: none 0;
+            background: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+    <script type="text/javascript">
+        //자동차 옵션 체크박스를 클릭할 떄마다 car() 함수를 호출하여 가격을 추가
+        function car() {
+            //defaultValue는 <input> 태그에 초기에 입력된 value값을 말홤.
+            let basic_car = parseInt(document.getElementById("total").defaultValue);
+
+            for(let i=1; i<=3; i++) {//1부터 3까지 반복실행
+                let check = document.getElementById("opt"+i);
+
+                if(check.checked) {//옵션이 체크가 되어있르면
+                    basic_car += parseInt(check.value);
+                }
+            }//for문 end
+
+            //위에서 더해진 가격을 total요소에 value값으로 입력
+            document.getElementById("total").value = basic_car;
+        }
+    
+    </script>
+</head>
+<body>
+    <h1>자동차 견적</h1>
+    <div id="carZone">
+        <p><img src="../images/car2.jpg" alt="자동차"></p>
+        <table id="estimate">
+            <colgroup>
+                <col width="380px">
+                <col width="160px">
+                <col width="*">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>옵션</th>
+                    <th>추가가격</th>
+                    <th>선택</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th>기본차량가격</th>
+                    <td colspan="2">   
+                        <input type="text" name="total" id="total"
+                            value="16450000" readonly>
+                    </td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td><label for="opt1">인조가죽시트</label></td>
+                    <td>250000</td>
+                    <td><input type="checkbox" name="opt1" id="opt1"
+                                value="250000" onclick="car()"></td>
+                </tr>
+                <tr>
+                    <td><label for="opt2">네비게이션</label></td>
+                    <td>250000</td>
+                    <td><input type="checkbox" name="opt2" id="opt2"
+                                value="250000" onclick="car()"></td>
+                </tr>
+                <tr>
+                    <td><label for="opt3">선루프</label></td>
+                    <td>450000</td>
+                    <td><input type="checkbox" name="opt3" id="opt3"
+                                value="450000" onclick="car()"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

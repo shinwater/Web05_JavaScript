@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+		onload = function() {
+			//요소생성
+			let p_element = document.createElement("p"); //p태그를 만들어주새욧
+			let hr_element = document.createElement("hr"); //hr태그를 만들어주세요~
+			
+			// 요소에 속성추가
+			hr_element.setAttribute("title","DOM을 이용한 수평선");
+			
+			//생성된 요소를 body태그에 추가해 보자. append:추가하다 CHild:자식으로으...
+			document.body.appendChild(p_element); //body 태그에 p 태그 추가
+			document.body.appendChild(hr_element); //body 태그에 hr 태그 추가
+			
+			
+			//<p><hr></p>하고싶당 그러면 p자식으로 hr
+			p_element.appendChile(hr_element);
+			document.body.appendChild(p_element);
+		}
+
+</script>
+</head>
+<body>
+		<hr title="직접 태그를 이용하여 생성된 수평선"/>
+</body>
+</html>

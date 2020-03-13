@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- <script type="text/javascript">
+
+
+/*  자바스크립트에서 body 태그의 요소(element)를 가져오는 방법 (3가지)
+ 1. <form> 태그의 name 속성으로 가져오는 방법
+     형식) 폼이름. name이름.value;
+ 2. 태그의 id 속성으로 가져오는 방법 
+     형식) document.getElementById("아이디").value;
+             => 두 방법은 폼태그의 요소에 id가 쓰였는지, name이 쓰였는지에 따라  
+3.요소의 이름을 이용해서 요소를 가져오는 방법
+	  형식)  document.getElementsByTagName("요소명"); //배열로 가져옴...!!
+*/
+ 
+
+</script> -->
+</head>
+<body>
+		<p>내용1</p>
+		<p>내용2</p>
+		<p>내용3</p>
+		<p>내용4</p>
+		<p>내용5</p>
+		
+		<script type="text/javascript">
+				// getElementsByTagName("태그이름")을 사용하면 결과값은 배열로 저장이 되어 반환이 됨.
+				//이렇게 하면 함수이름 onload로 안써도됨..!
+				 let p_tag = document.getElementsByTagName("p");
+				
+				//font-size인디 자바스크립트에선 - 안씀.. 대신 다음글자를 대문자로
+				p_tag[2].style.fontSize = "20px";
+				
+				p_tag[2].style.fontWeight = "bold";
+				
+				p_tag[2].style.color = "tomato";
+		
+		</script>
+</body>
+</html>
